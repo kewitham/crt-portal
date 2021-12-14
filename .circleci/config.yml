@@ -28,15 +28,18 @@ install-python-dev-dependencies: &install-python-dev-dependencies
       pip install pipenv
       pipenv install --dev
       pipenv run python -m playwright install
-
-version: 2
+# verson changed form 2 to 2.1 for next-gen
+version: 2.1
+# orbs added for browser testing
+orbs:
+  browser-tools: circleci/browser-tools@1.2.3
 jobs:
   build_and_test: # runs not using Workflows must have a `build` job as entry point
     # directory where steps are run
     working_directory: ~/code
     docker:
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
-      - image: circleci/python:3.9.7-node-browsers
+      - image: cimg/python:3.9.7-node-browsers
         environment: # environment variables for primary container
           PIPENV_VENV_IN_PROJECT: true
           DATABASE_URL: postgresql://root@localhost/circle_test?sslmode=disable
@@ -130,7 +133,7 @@ jobs:
     working_directory: ~/code
     docker:
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
-      - image: circleci/python:3.9.7-node-browsers
+      - image: cimg/python:3.9.7-node-browsers
         environment: # environment variables for primary container
           PIPENV_VENV_IN_PROJECT: true
     steps:
@@ -145,7 +148,7 @@ jobs:
     working_directory: ~/code
     docker:
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
-      - image: circleci/python:3.9.7-node-browsers
+      - image: cimg/python:3.9.7-node-browsers
         environment: # environment variables for primary container
           PIPENV_VENV_IN_PROJECT: true
     steps:
@@ -433,7 +436,7 @@ jobs:
           command: cf run-task crt-portal-django  -c "python crt_portal/manage.py clearsessions" --name clear-sessions
 
 workflows:
-  version: 2
+  version: 2.1
   build-test-deploy:
     jobs:
       - build_and_test
