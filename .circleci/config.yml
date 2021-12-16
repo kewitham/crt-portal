@@ -16,17 +16,23 @@ install-python-dependencies: &install-python-dependencies
   run:
     name: Install python dependencies
     command: |
+      pwd
       pip install -U pip
       pip install pipenv
+      pwd
       pipenv install
+      pwd
 
 install-python-dev-dependencies: &install-python-dev-dependencies
   run:
     name: Install python dev dependencies
     command: |
+      pwd
       pip install -U pip
       pip install pipenv
+      pwd
       pipenv install --dev
+      pwd
       pipenv run python -m playwright install
 # verson changed form 2 to 2.1 for next-gen
 version: 2.1
