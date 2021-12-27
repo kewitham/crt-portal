@@ -30,8 +30,10 @@ install-python-dev-dependencies: &install-python-dev-dependencies
       pwd
       pip install -U pip
       pip install pipenv
+      ls -la ~
       pwd
       pipenv install --dev
+      ls -la ~
       pwd
       pipenv run python -m playwright install
       pwd
