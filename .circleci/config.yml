@@ -34,18 +34,19 @@ install-python-dev-dependencies: &install-python-dev-dependencies
       pipenv install --dev
       pwd
       pipenv run python -m playwright install
-# verson changed form 2 to 2.1 for next-gen
+      pwd
+# version changed form 2 to 2.1 for next-gen
 version: 2.1
 # orbs added for browser testing
-orbs:
-  browser-tools: circleci/browser-tools@1.2.3
+# orbs:
+#  browser-tools: circleci/browser-tools@1.2.3
 jobs:
   build_and_test: # runs not using Workflows must have a `build` job as entry point
     # directory where steps are run
     working_directory: ~/code
     docker:
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
-      - image: cimg/python:3.9.7-browsers
+      - image: cimg/python:3.9.7-node-browsers
         environment: # environment variables for primary container
           PIPENV_VENV_IN_PROJECT: true
           DATABASE_URL: postgresql://root@localhost/circle_test?sslmode=disable
