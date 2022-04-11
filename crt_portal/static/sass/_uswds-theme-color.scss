@@ -7,7 +7,8 @@
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.10.3
+##USWDS 2.10.3 upgrading to 2.13.1
+USWDS 2.13.1
 ----------------------------------------
 COLOR SETTINGS
 ----------------------------------------
@@ -24,7 +25,13 @@ Theme palette colors
 */
 
 // Base colors
+// ---------------
+
+//USWDS 2.10.3
+//$theme-color-base-family: "gray-cool";
+//we keep our current color
 $theme-color-base-family: "gray";
+
 $theme-color-base-lightest: "gray-5";
 $theme-color-base-lighter: "gray-cool-10";
 $theme-color-base-light: "gray-30";
@@ -32,26 +39,61 @@ $theme-color-base: "gray-50";
 $theme-color-base-dark: "gray-cool-60";
 $theme-color-base-darker: "gray-70";
 $theme-color-base-darkest: "gray-90";
+
+// USWDS 2.13.1 color
+// $theme-color-base-ink: "gray-90";
+// keep current color
 $theme-color-base-ink: "gray-warm-80";
 
+
 // Primary colors
+// -------------------
+
 $theme-color-primary-family: "blue";
+
+// USWDS 2.13.1
+//$theme-color-primary-lightest: false;
+// keeping existing color setting
 $theme-color-primary-lightest: "blue-warm-5";
+
 $theme-color-primary-lighter: "blue-warm-10";
 $theme-color-primary-light: "blue-30";
+
+
+// USWDS 2.10.3 color
+//$theme-color-primary: "blue-60v";
+// Keeping current color
 $theme-color-primary: "blue-warm-70v";
+
+
 $theme-color-primary-vivid: "blue-warm-60v";
 $theme-color-primary-dark: "blue-warm-70v";
 $theme-color-primary-darker: "blue-warm-80v";
 $theme-color-primary-darkest: false;
 
 // Secondary colors
+// -------------------
 $theme-color-secondary-family: "red";
 $theme-color-secondary-lightest: false;
-$theme-color-secondary-lighter: false;
-$theme-color-secondary-light: false;
+
+// USWDS 2.13.1
+$theme-color-secondary-lighter: "red-cool-10";
+// Cannot keep current color setting, must have value
+// $theme-color-secondary-lighter: false;
+
+
+// USWDS 2.10.3 color
+$theme-color-secondary-light: "red-30";
+// not keeping current color
+// $theme-color-secondary-light: false;
+
 $theme-color-secondary: "red-50";
-$theme-color-secondary-vivid: false;
+
+//USWDS 2.13.1
+$theme-color-secondary-vivid: "red-cool-50v";
+// not keeping current
+// $theme-color-secondary-vivid: false;
+
 $theme-color-secondary-dark: "red-60v";
 $theme-color-secondary-darker: "red-70v";
 $theme-color-secondary-darkest: false;
@@ -59,18 +101,37 @@ $theme-color-secondary-darkest: false;
 // Accent warm colors
 $theme-color-accent-warm-family: "orange";
 $theme-color-accent-warm-lightest: false;
-$theme-color-accent-warm-lighter: false;
-$theme-color-accent-warm-light: false;
+
+// USWDS 2.13.1
+$theme-color-accent-warm-lighter: "orange-10";
+// not keeping current
+// $theme-color-accent-warm-lighter: false;
+
+// USWDS 2.13.1
+$theme-color-accent-warm-light: "orange-20v";
+// not keeping current
+// $theme-color-accent-warm-light: false;
+
 $theme-color-accent-warm: "orange-30v";
 $theme-color-accent-warm-dark: "orange-50v";
 $theme-color-accent-warm-darker: "orange-60";
 $theme-color-accent-warm-darkest: false;
 
 // Accent cool colors
+// -------------------
 $theme-color-accent-cool-family: "blue-cool";
 $theme-color-accent-cool-lightest: false;
-$theme-color-accent-cool-lighter: false;
-$theme-color-accent-cool-light: false;
+
+// USWDS 2.13.1
+$theme-color-accent-cool-lighter: "blue-cool-5v";
+// not keeping current
+// $theme-color-accent-cool-lighter: false;
+
+// USWDS 2.13.1
+$theme-color-accent-cool-light: "blue-cool-20v";
+// Not keeping current
+// $theme-color-accent-cool-light: false;
+
 $theme-color-accent-cool: "cyan-30v";
 $theme-color-accent-cool-dark: "blue-cool-40v";
 $theme-color-accent-cool-darker: "blue-cool-60v";
@@ -138,11 +199,26 @@ $theme-text-color: "ink";
 $theme-text-reverse-color: "white";
 
 // Links
+// -------
+// USWDS 2.13.1
+// $theme-link-color: "primary";
+// keep current
 $theme-link-color: $theme-color-primary-darker;
+
+// USWDS 2.13.1
+// $theme-link-visited-color: "violet-70v";
+// keep current
 $theme-link-visited-color: $theme-color-primary-darker;
+
+// USWDS 2.13.1
+// $theme-link-hover-color: "primary-dark";
+// keep current
 $theme-link-hover-color: "blue-50";
+
+
 $theme-link-active-color: "primary-darker";
 $theme-link-reverse-color: "base-lighter";
 $theme-link-reverse-hover-color: "base-lightest";
 $theme-link-reverse-active-color: "white";
-$theme-link-dark-hover-color: "blue-warm-30v"; // Custom
+
+$theme-link-dark-hover-color: "blue-warm-30v"; // Custom portal color

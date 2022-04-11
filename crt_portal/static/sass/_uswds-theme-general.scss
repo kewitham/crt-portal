@@ -7,7 +7,8 @@
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.10.3
+USWDS 2.10.3 migrating to 2.13.1
+https://github.com/uswds/uswds/blob/release-2.13.1
 ----------------------------------------
 GENERAL SETTINGS
 ----------------------------------------
@@ -38,6 +39,10 @@ Show updates and notifications.
 ----------------------------------------
 */
 
+// USWDS 2.13.3
+// $theme-show-compile-warnings: true;
+// $theme-show-notifications: true;
+// keeping current
 $theme-show-compile-warnings: false;
 $theme-show-notifications: false;
 
@@ -58,6 +63,22 @@ $theme-namespace: (
   ),
 );
 
+// USWDS 2.13.1
+/*
+----------------------------------------
+Prefix separator
+----------------------------------------
+Set the character the separates
+responsive and state prefixes from the
+main class name.
+The default (":") needs to be preceded
+by two backslashes to be properly
+escaped.
+----------------------------------------
+*/
+
+$theme-prefix-separator: "\\:";
+
 /*
 ----------------------------------------
 Layout grid
@@ -67,6 +88,9 @@ with !important
 ----------------------------------------
 */
 
+// USWDS 2.13.1
+// $theme-layout-grid-use-important: false;
+// keep current
 $theme-layout-grid-use-important: false !default;
 
 /*

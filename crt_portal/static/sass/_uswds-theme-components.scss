@@ -7,7 +7,7 @@
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.10.3
+USWDS 2.10.3 upgraded to 2.13.1
 ----------------------------------------
 COMPONENT SETTINGS
 ----------------------------------------
@@ -25,15 +25,26 @@ $theme-accordion-font-family: "body";
 // Alert
 $theme-alert-bar-width: 1;
 $theme-alert-font-family: "ui";
+// USWDS 2.13.1
+// $theme-alert-icon-size: 4;
 $theme-alert-icon-size: 5;
+
 $theme-alert-padding-x: 2.5;
+
+//USWDS 2.13.1
+$theme-alert-padding-y: 2;
+
 $theme-alert-text-color: default;
 $theme-alert-text-reverse-color: default;
 $theme-alert-link-color: default;
 $theme-alert-link-reverse-color: default;
 
 // Banner
+
+// USWDS 2.13.1
+// $theme-banner-background-color: "base-lightest";
 $theme-banner-background-color: "ink";
+
 $theme-banner-font-family: "ui";
 $theme-banner-link-color: "warning";
 $theme-banner-max-width: "desktop";
@@ -79,14 +90,24 @@ $theme-footer-max-width: "desktop";
 // Form and input
 $theme-checkbox-border-radius: "sm";
 $theme-form-font-family: "ui";
+
+// USWDS 2.13.1
+$theme-input-background-color: default;
+
 $theme-input-line-height: 3;
 $theme-input-max-width: "mobile-lg";
 $theme-input-select-border-width: 2px;
 $theme-input-select-size: 2.5;
 $theme-input-state-border-width: 0.5;
+
 $theme-input-tile-background-color-selected: "primary-lighter";
+
+// USWDS 2.13.1
+$theme-input-select-size: 2.5;
+
 $theme-input-tile-border-radius: "md";
 $theme-input-tile-border-width: 2px;
+
 $theme-input-tile-border-color: "base-lighter";
 $theme-input-tile-border-color-selected: "primary-light";
 
@@ -106,6 +127,22 @@ $theme-identifier-identity-domain-color: "base-light";
 $theme-identifier-max-width: "desktop";
 $theme-identifier-primary-link-color: default;
 $theme-identifier-secondary-link-color: "base-light";
+
+// USWDS 2.13.1
+// Modal
+$theme-modal-border-radius: "lg";
+$theme-modal-default-max-width: "mobile-lg";
+$theme-modal-lg-content-max-width: "tablet";
+$theme-modal-lg-max-width: "tablet-lg";
+
+// USWDS 2.13.1
+// Pagination
+$theme-pagination-background-color: "default";
+$theme-pagination-breakpoint: "tablet";
+$theme-pagination-button-border-radius: "md";
+$theme-pagination-button-border-width: 1px;
+$theme-pagination-font-family: "ui";
+
 
 // Process List
 $theme-process-list-counter-background-color: "white";
@@ -168,14 +205,42 @@ $theme-summary-box-link-color: default;
 $theme-summary-box-text-color: default;
 
 // Table
+// USWDS 2.13.1
+// $theme-table-border-color: default;
+// keep current
 $theme-table-border-color: "ink";
+
 $theme-table-header-background-color: "base-lighter";
+
+// USWDS 2.13.1
+// $theme-table-header-text-color: default;
+// keep current
 $theme-table-header-text-color: "ink";
+
 $theme-table-stripe-background-color: "base-lightest";
+
+// USWDS 2.13.1
+// $theme-table-stripe-text-color: default;
+// $theme-table-text-color: default;
+// keep current for both
 $theme-table-stripe-text-color: "ink";
 $theme-table-text-color: "ink";
 
+// USWDS 2.13.1 new
+$theme-table-sorted-header-background-color: "accent-cool-light";
+$theme-table-sorted-background-color: "accent-cool-lighter";
+$theme-table-sorted-stripe-background-color: "blue-cool-10v";
+$theme-table-sorted-icon-color: default;
+$theme-table-unsorted-icon-color: "base";
+
+
 // Tooltips
+
+// USWDS 2.13.1
+// $theme-tooltip-background-color: "ink";
+// $theme-tooltip-font-color: "base-lightest";
+// Keep current for both
 $theme-tooltip-background-color: "primary-darker";
 $theme-tooltip-font-color: "white";
+
 $theme-tooltip-font-size: "xs";

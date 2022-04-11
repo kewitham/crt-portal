@@ -7,7 +7,7 @@
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.10.3
+USWDS 2.10.3 migrating to 2.13.1
 ----------------------------------------
 TYPOGRAPHY SETTINGS
 ----------------------------------------
@@ -166,6 +166,10 @@ $theme-font-type-lang: false;
 // monospace
 $theme-font-type-mono: "roboto-mono";
 
+// USWDS 2.13.1
+// sans-serif
+$theme-font-type-sans: "source-sans-pro";
+// Keep current
 // sans-serif
 $theme-font-type-sans: "public-sans";
 
@@ -199,6 +203,10 @@ $theme-font-icon-custom-stack: false;
 $theme-font-lang-custom-stack: false;
 $theme-font-mono-custom-stack: false;
 $theme-font-sans-custom-stack: false;
+
+// USWDS 2.13.1
+// $theme-font-serif-custom-stack: false;
+// Keep current
 $theme-font-serif-custom-stack: "Merriweather Web, Tinos, Georgia, Cambria, Times New Roman, Times, serif";
 
 /*
